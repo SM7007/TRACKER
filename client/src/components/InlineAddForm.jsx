@@ -67,7 +67,7 @@ export default function InlineAddForm({ placeholder, buttonLabel, onSubmit, comp
       <button
         type="submit"
         disabled={submitting}
-        className="text-xs font-mono bg-amber text-ink rounded-md px-2.5 py-1.5 hover:bg-amber-soft transition disabled:opacity-60"
+        className="text-xs font-mono bg-amber text-on-accent rounded-md px-2.5 py-1.5 hover:bg-amber-soft transition disabled:opacity-60"
       >
         {submitting ? "Adding…" : "Add"}
       </button>

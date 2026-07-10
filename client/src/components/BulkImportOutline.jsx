@@ -148,7 +148,7 @@ export default function BulkImportOutline({ onAddTopic, onAddSubtopic }) {
         <button
           type="submit"
           disabled={importing || preview.length === 0}
-          className="text-xs font-mono bg-amber text-ink rounded-md px-2.5 py-1.5 hover:bg-amber-soft transition disabled:opacity-60"
+          className="text-xs font-mono bg-amber text-on-accent rounded-md px-2.5 py-1.5 hover:bg-amber-soft transition disabled:opacity-60"
         >
           {importing ? progress || "Importing…" : "Import outline"}
         </button>

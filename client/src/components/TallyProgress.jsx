@@ -2,8 +2,8 @@
 // generic rounded progress pill. Caps the rendered ticks so a topic with
 // 40 subtopics doesn't render 40 bars; falls back to a proportional fill.
 export default function TallyProgress({ done, total, tone = "amber" }) {
-  const color = tone === "teal" ? "#4FD1AE" : "#E8A94C";
-  const trackColor = "#2E3350";
+  const color = tone === "teal" ? "rgb(var(--color-teal))" : "rgb(var(--color-amber))";
+  const trackColor = "rgb(var(--color-rule))";
   const maxTicks = 12;
 
   if (total === 0) {

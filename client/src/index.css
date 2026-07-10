@@ -3,23 +3,65 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  /* ---- Color tokens ----
+     Dark is the default palette (no attribute needed on <html>).
+     Adding data-theme="light" on <html> swaps every token to the light
+     palette. Values are "R G B" triplets (no commas) so Tailwind's
+     rgb(var(--x) / <alpha-value>) pattern can still apply opacity
+     modifiers like bg-teal/15. */
+  :root {
     color-scheme: dark;
+
+    --color-ink: 20 22 31;
+    --color-surface: 28 32 48;
+    --color-raised: 36 42 68;
+    --color-rule: 46 51 80;
+
+    --color-amber: 232 169 76;
+    --color-amber-soft: 242 199 132;
+
+    --color-teal: 79 209 174;
+    --color-teal-soft: 143 230 203;
+
+    --color-ink2-text: 236 234 227;
+    --color-ink2-muted: 139 144 168;
+    --color-ink2-faint: 86 92 120;
   }
+
+  [data-theme="light"] {
+    color-scheme: light;
+
+    --color-ink: 250 248 243;
+    --color-surface: 255 255 255;
+    --color-raised: 255 255 255;
+    --color-rule: 228 224 213;
+
+    --color-amber: 201 134 46;
+    --color-amber-soft: 230 168 92;
+
+    --color-teal: 30 158 124;
+    --color-teal-soft: 88 196 165;
+
+    --color-ink2-text: 30 34 51;
+    --color-ink2-muted: 91 96 121;
+    --color-ink2-faint: 148 152 173;
+  }
+
   body {
     @apply bg-ink text-ink2-text font-body antialiased;
     background-image: radial-gradient(
       circle at 15% 0%,
-      rgba(232, 169, 76, 0.05),
+      rgb(var(--color-amber) / 0.05),
       transparent 40%
     );
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
   ::selection {
     @apply bg-amber/30 text-ink2-text;
   }
   /* Visible keyboard focus everywhere */
   :focus-visible {
-    outline: 2px solid #e8a94c;
+    outline: 2px solid rgb(var(--color-amber));
     outline-offset: 2px;
     border-radius: 4px;
   }

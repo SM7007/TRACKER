@@ -58,11 +58,11 @@ export default function EditableTitle({
   return (
     <span className="group/title inline-flex items-center gap-2 min-w-0">
       <Tag className={`${className} truncate`}>{value}</Tag>
-      <span className="opacity-70 group-hover/title:opacity-100 transition-opacity flex items-center gap-1 shrink-0">
+      <span className="opacity-70 group-hover/title:opacity-100 transition-opacity flex items-center gap-0.5 shrink-0">
         <button
           type="button"
           onClick={() => setEditing(true)}
-          className="text-ink2-faint hover:text-amber p-0.5"
+          className="text-ink2-faint hover:text-amber p-1.5 -m-0.5"
           aria-label="Edit"
           title="Edit"
         >
@@ -76,7 +76,7 @@ export default function EditableTitle({
             type="button"
             onClick={handleDelete}
             disabled={isDeleting}
-            className={`text-ink2-faint hover:text-red-400 p-0.5 ${
+            className={`text-ink2-faint hover:text-red-400 p-1.5 -m-0.5 ${
               isDeleting ? "opacity-60 cursor-wait" : ""
             }`}
             aria-label="Delete"

@@ -3,7 +3,7 @@ import EditableTitle from "./EditableTitle.jsx";
 
 export default function SubtopicRow({ subtopic, onToggle, onRename, onDelete }) {
   return (
-    <div className="flex items-center gap-3 py-1.5 pl-1 group">
+    <div className="flex items-center gap-3 py-2 pl-1 group">
       <Checkmark
         checked={subtopic.completed}
         onToggle={onToggle}

@@ -4,7 +4,7 @@ export default function CompletePill() {
       <svg width="10" height="10" viewBox="0 0 14 14" fill="none">
         <path
           d="M2.5 7.2L5.6 10.3L11.5 3.8"
-          stroke="#4FD1AE"
+          stroke="currentColor"
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"

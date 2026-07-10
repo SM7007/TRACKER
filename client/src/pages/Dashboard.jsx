@@ -255,7 +255,7 @@ export default function Dashboard() {
     <div className="min-h-screen">
       <Header username={user?.username} stats={stats} onLogout={logout} />
 
-      <main className="max-w-3xl mx-auto px-6 py-10 space-y-6">
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-10 space-y-6">
         {loading && (
           <p className="font-mono text-sm text-ink2-muted">Loading your tracker…</p>
         )}

@@ -21,7 +21,7 @@ export default function Checkmark({ checked, onToggle, label }) {
       disabled={isLoading}
       aria-pressed={checked}
       aria-label={checked ? `Mark "${label}" incomplete` : `Mark "${label}" complete`}
-      className={`shrink-0 w-5 h-5 rounded-md border flex items-center justify-center transition-colors ${
+      className={`shrink-0 w-6 h-6 rounded-md border flex items-center justify-center transition-colors ${
         isLoading ? "opacity-60 cursor-wait" : ""
       } ${
         checked
@@ -32,7 +32,7 @@ export default function Checkmark({ checked, onToggle, label }) {
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
         <path
           d="M2.5 7.2L5.6 10.3L11.5 3.8"
-          stroke="#4FD1AE"
+          stroke="rgb(var(--color-teal))"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"

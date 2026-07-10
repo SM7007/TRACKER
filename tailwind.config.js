@@ -1,26 +1,35 @@
 /** @type {import('tailwindcss').Config} */
+function withOpacity(variable) {
+  return `rgb(var(${variable}) / <alpha-value>)`;
+}
+
 module.exports = {
   content: ["./client/index.html", "./client/src/**/*.{js,jsx}"],
+  darkMode: ["selector", '[data-theme="dark"]'],
   theme: {
     extend: {
       colors: {
-        ink: "#14161F",
-        surface: "#1C2030",
-        raised: "#242A44",
-        rule: "#2E3350",
+        ink: withOpacity("--color-ink"),
+        surface: withOpacity("--color-surface"),
+        raised: withOpacity("--color-raised"),
+        rule: withOpacity("--color-rule"),
         amber: {
-          DEFAULT: "#E8A94C",
-          soft: "#F2C784",
+          DEFAULT: withOpacity("--color-amber"),
+          soft: withOpacity("--color-amber-soft"),
         },
         teal: {
-          DEFAULT: "#4FD1AE",
-          soft: "#8FE6CB",
+          DEFAULT: withOpacity("--color-teal"),
+          soft: withOpacity("--color-teal-soft"),
         },
         ink2: {
-          text: "#ECEAE3",
-          muted: "#8B90A8",
-          faint: "#565C78",
+          text: withOpacity("--color-ink2-text"),
+          muted: withOpacity("--color-ink2-muted"),
+          faint: withOpacity("--color-ink2-faint"),
         },
+        // Fixed (non-theme-switching) dark color for text sitting on top of
+        // amber/teal accent buttons — those buttons stay a mid-warm tone in
+        // both themes, so their label always needs dark text, never light.
+        "on-accent": "#14161F",
       },
       fontFamily: {
         display: ["Fraunces", "serif"],

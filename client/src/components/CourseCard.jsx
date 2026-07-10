@@ -25,7 +25,7 @@ export default function CourseCard({
 
   return (
     <div className="bg-surface border border-rule rounded-2xl overflow-hidden">
-      <div className="px-6 pt-5 pb-4 flex items-start justify-between gap-4">
+      <div className="px-4 sm:px-6 pt-5 pb-4 flex items-start justify-between gap-4">
         <div className="min-w-0 flex-1">
           <p className="font-mono text-[11px] tracking-[0.25em] text-amber uppercase mb-1">
             Course {String(index + 1).padStart(2, "0")}
@@ -72,7 +72,7 @@ export default function CourseCard({
       </div>
 
       {expanded && (
-        <div className="px-6 pb-5">
+        <div className="px-4 sm:px-6 pb-5">
           {course.topics.map((topic, i) => (
             <TopicBlock
               key={topic.id}
