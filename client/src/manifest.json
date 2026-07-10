@@ -1,14 +1,14 @@
 {
     "name": "TRACKER",
-    "short_name": "Website",
+    "short_name": "TRACKER ",
     "icons": [
         {
-            "src": "src/favicon.png",
+            "src": "/icon-192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "src/favicon.png",
+            "src": "/icon-512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
