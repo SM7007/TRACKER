@@ -3,12 +3,12 @@
     "short_name": "Website",
     "icons": [
         {
-            "src": "src/favigon.png",
+            "src": "src/favicon.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "src/favigon.png",
+            "src": "src/favicon.png",
             "sizes": "512x512",
             "type": "image/png"
         }
